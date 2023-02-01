@@ -7,8 +7,8 @@
 [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:saber.rezaei0936@gmail.com)
 [![Github](https://img.shields.io/github/followers/000saber000?label=Follow&style=social)](https://github.com/000saber000)
 
-- 👨🏻‍🎓 Bachelo's Degree in the Field of Electrical Engineering 
-- 🧑‍🎓 M.Sc. in Cognitive Neural Engineering 
+- 👨🏻‍🎓 Bachelo's Degree in Electrical Engineering 
+- 🎓 M.Sc. in Cognitive Neural Engineering 
 - 🌱 Interseted in Python , Ml and Ai
 - 📫 How to reach me: click on E-Mail Badge on top of page
 
