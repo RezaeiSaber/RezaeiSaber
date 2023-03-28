@@ -17,6 +17,7 @@
 
 - Python
 - Machine Learning
+- Deep Learning (TensorFlow)
 
 <div align="left">
 
