@@ -8,17 +8,19 @@
 [![Github](https://img.shields.io/github/followers/000saber000?label=Follow&style=social)](https://github.com/RezaeiSaber)
 
 - 👨🏻‍🎓 Bachelo's Degree in Electrical Engineering 
-- 🎓 M.Sc. in Cognitive Neural Engineering 
-- 🌱 Interseted in Python , Ml and Ai
+- 🎓 M.Sc. in Neurocognitive engineering
+- 🌱 Interseted in Signal Processing, Coding , ML and DL
 - 📫 How to reach me: click on E-Mail Badge on top of page
 
 
 ### 🖥 Skills
 
+- Signal Processing
 - Python
+- Matlab
 - Machine Learning
 - Deep Learning (TensorFlow)
-
+- Data Analysis
 <div align="left">
 
   <img  src="https://github.com/000saber000/000saber000/blob/main/resources/img/grid-snake.svg"
