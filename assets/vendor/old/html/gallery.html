@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E587SWM9M2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E587SWM9M2');
+</script>
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../assets/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/nice-select/css/nice-select.css">
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/fancybox/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/virtual.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/topbar.virtual.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <!-- Add Font Awesome for the footer icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Gallery</title>
+  <!-- Custom CSS to fix gallery layout issues -->
+  <style>
+/* Additional CSS to further improve the gallery layout */
+
+/* Improve overall spacing and prevent overlapping */
+.gridder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Ensure grid items stay in their lanes */
+.grid-item {
+  width: 100% !important;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px) !important;
+}
+
+/* Improve image containers */
+.img-place {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f5f5f5; /* Light background while images load */
+}
+
+/* Improve image loading and display - FIXED: Set opacity to 1 initially */
+.img-place img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  opacity: 1; /* Changed from 0 to 1 to make images visible immediately */
+}
+
+.img-place:hover img {
+  transform: scale(1.05);
+}
+
+/* Better caption styling */
+.img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 12px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.img-place:hover .img-caption {
+  transform: translateY(0);
+}
+
+.img-caption h5 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.img-caption p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Improved section headers */
+.section-header {
+  margin-top: 60px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #e83e8c; /* Theme color */
+}
+
+/* Enhanced responsive adjustments */
+@media (max-width: 1200px) {
+  .gridder {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .gridder {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .img-place {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridder {
+    grid-gap: 15px;
+  }
+  
+  .img-place {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gridder {
+    grid-template-columns: 1fr;
+  }
+  
+  .img-place {
+    height: 250px;
+  }
+}
+
+/* Fix for FancyBox z-index issues */
+.fancybox-container {
+  z-index: 9999;
+}
+
+/* Ensure animations don't cause layout issues */
+.wow {
+  visibility: hidden;
+}
+  </style>
+</head>
+<body class="theme-red">
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+
+  <!-- Basic Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="youtube.html">YouTube</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pub.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gallery Page Content -->
+  <div class="vg-page page-Gallery" id="Gallery">
+    <div class="container">
+      <!-- Research Gallery Header -->
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead" style="font-size: 25px; font-weight: bold;">Research Gallery</div>
+      </div>
+
+      <!-- Research Gallery Description -->
+      <div class="text-center wow fadeInUp">
+        <p class="lead">
+          Welcome to my gallery! Here, I share moments from my journey as a researcher and engineer. 
+          This page captures my experiences in the lab, EEG recording sessions, and other highlights 
+          from my work in Cognitive NeuroEngineering. Each image tells a story of discovery, innovation, 
+          and the pursuit of understanding the human brain. Explore to get a glimpse into my world of 
+          research and experimentation.
+        </p>
+      </div>
+
+      <!-- Research Projects -->
+      <h3 class="section-header wow fadeInUp">Research Projects and Events</h3>
+      <div class="gridder my-3">
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/me at lab.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Me At INTC Lab</h5> <p>EEG data analysis</p>">
+            <img src="../assets/img/work/me at lab.jpg" alt="Me at INTC Lab">
+            <div class="img-caption">
+              <h5 class="fg-theme">Me At INTC Lab</h5>
+              <p>EEG data analysis</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/my subject.jpg" data-fancybox data-caption="<h5 class='fg-theme'>EEG Recording Session</h5> <p>The subject is resting and waiting to drink water.</p>">
+            <img src="../assets/img/work/my subject.jpg" alt="EEG Recording Session">
+            <div class="img-caption">
+              <h5 class="fg-theme">EEG Recording Session</h5>
+              <p>The Subject</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/fes/functions.JPG" data-fancybox data-caption="<h5 class='fg-theme'>Paragrasp Device</h5> <p>Paragrasp Device with Corresponding Hand Gestures</p>">
+            <img src="../assets/img/work/fes/functions.JPG" alt="Paragrasp Device">
+            <div class="img-caption">
+              <h5 class="fg-theme">Paragrasp</h5>
+              <p>Paragrasp Device with Corresponding Hand Gestures</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/me as subject fnirs.jpg" data-fancybox data-caption="<h5 class='fg-theme'>At national brain mapping laboratory</h5> <p>Me As Subject for FNIRS Task</p>">
+            <img src="../assets/img/work/me as subject fnirs.jpg" alt="FNIRS Task">
+            <div class="img-caption">
+              <h5 class="fg-theme">Me As Subject</h5>
+              <p>At national brain mapping laboratory</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/national brain mapping lab.jpg" data-fancybox data-caption="<h5 class='fg-theme'>National Brain Mapping Laboratory</h5> <p></p>">
+            <img src="../assets/img/work/national brain mapping lab.jpg" alt="Brain Mapping Lab">
+            <div class="img-caption">
+              <h5 class="fg-theme">National Brain Mapping Laboratory</h5>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/demonstrating hand gesture fes.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Demonstration of Hand Gesture FES System</h5> <p>Demonstration of the FES system by our team to a high-ranking national official</p>">
+            <img src="../assets/img/work/demonstrating hand gesture fes.jpg" alt="FES System Demo">
+            <div class="img-caption">
+              <h5 class="fg-theme">Demonstration of Hand Gesture FES System</h5>
+              <p>Demonstration of the FES system by our team</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/python event.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Python Event</h5> <p>Presentation of the case study by our team</p>">
+            <img src="../assets/img/work/python event.jpg" alt="Python Event">
+            <div class="img-caption">
+              <h5 class="fg-theme">Python Event</h5>
+              <p>Presentation of the case study by our team</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/work/python event2.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Python Event</h5> <p>A programming event featuring discussions and problem-solving on critical thinking and new perspectives.</p>">
+            <img src="../assets/img/work/python event2.jpg" alt="Python Event 2">
+            <div class="img-caption">
+              <h5 class="fg-theme">Python Event</h5>
+              <p>A programming event featuring discussions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      Volunteer and Charity Work Header
+      <div class="text-center wow fadeInUp mt-5">
+        <div class="badge badge-subhead" style="font-size: 25px; font-weight: bold;">Volunteer and Charity Work</div>
+      </div>
+
+      <!-- Volunteer Work Description -->
+      <div class="text-center wow fadeInUp">
+        <p class="lead">
+          Beyond my research, I am deeply committed to community service and social impact. 
+          These images capture my involvement in volunteer initiatives and charitable projects, 
+          reflecting my belief in giving back and making a positive difference in society.
+        </p>
+      </div>
+
+      <!-- Volunteer Gallery Images - Section 1: Rural Development Project -->
+      <h3 class="section-header wow fadeInUp">Rural Development Project</h3>
+      <div class="gridder my-3">
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/1Preparation of group members for the charity camp..JPG" data-fancybox data-caption="<h5 class='fg-theme'>Preparation of group members for the charity camp</h5> <p>Team members gather and prepare supplies before departing for the rural charity initiative</p>">
+            <img src="../assets/img/vol/1/1Preparation of group members for the charity camp..JPG" alt="Preparation for charity camp">
+            <div class="img-caption">
+              <h5 class="fg-theme">Preparation for charity camp</h5>
+              <p>Team gathering before the rural project</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/2Transportation of necessary supplies for the charity camp..JPG" data-fancybox data-caption="<h5 class='fg-theme'>Transportation of necessary supplies</h5> <p>Loading and transporting essential materials and tools for the rural development project</p>">
+            <img src="../assets/img/vol/1/2Transportation of necessary supplies for the charity camp..JPG" alt="Transportation of supplies">
+            <div class="img-caption">
+              <h5 class="fg-theme">Transportation of supplies</h5>
+              <p>Moving essential materials to the site</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/3One of the group's projects..JPG" data-fancybox data-caption="<h5 class='fg-theme'>One of the group's projects</h5> <p>Working on a community development initiative in the rural area</p>">
+            <img src="../assets/img/vol/1/3One of the group's projects..JPG" alt="Group project">
+            <div class="img-caption">
+              <h5 class="fg-theme">Group project</h5>
+              <p>Community development initiative</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/4The spring of the region before restoration..jpg" data-fancybox data-caption="<h5 class='fg-theme'>The spring of the region before restoration</h5> <p>The natural water source before our rehabilitation efforts began</p>">
+            <img src="../assets/img/vol/1/4The spring of the region before restoration..jpg" alt="Spring before restoration">
+            <div class="img-caption">
+              <h5 class="fg-theme">Spring before restoration</h5>
+              <p>Natural water source before rehabilitation</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/5The villagers and some group members discussing the spring restoration project..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Villagers and group members discussing the spring restoration</h5> <p>Community meeting to plan the rehabilitation of the local water source</p>">
+            <img src="../assets/img/vol/1/5The villagers and some group members discussing the spring restoration project..jpeg" alt="Discussion about spring restoration">
+            <div class="img-caption">
+              <h5 class="fg-theme">Spring restoration planning</h5>
+              <p>Community planning meeting</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/6The villagers and some group members discussing the spring restoration project.2.jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Further discussions about the spring restoration</h5> <p>Additional planning and coordination between volunteers and local community members</p>">
+            <img src="../assets/img/vol/1/6The villagers and some group members discussing the spring restoration project.2.jpeg" alt="Further spring restoration discussion">
+            <div class="img-caption">
+              <h5 class="fg-theme">Continued planning</h5>
+              <p>Coordination with local community</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/7The spring restoration project is nearing completion..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Spring restoration nearing completion</h5> <p>Final stages of the water source rehabilitation project</p>">
+            <img src="../assets/img/vol/1/7The spring restoration project is nearing completion..jpeg" alt="Spring restoration progress">
+            <div class="img-caption">
+              <h5 class="fg-theme">Spring restoration progress</h5>
+              <p>Final stages of water rehabilitation</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/8The nature of the underprivileged village..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>The nature of the underprivileged village</h5> <p>Landscape and surroundings of the rural community we served</p>">
+            <img src="../assets/img/vol/1/8The nature of the underprivileged village..jpeg" alt="Village landscape">
+            <div class="img-caption">
+              <h5 class="fg-theme">Village landscape</h5>
+              <p>Rural community surroundings</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/9The nature of the underdeveloped village.2.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Another view of the village</h5> <p>Different perspective of the rural landscape and environment</p>">
+            <img src="../assets/img/vol/1/9The nature of the underdeveloped village.2.jpg" alt="Village environment">
+            <div class="img-caption">
+              <h5 class="fg-theme">Village environment</h5>
+              <p>Rural landscape and surroundings</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/10Preparing to wash the village mosque's carpets..JPG" data-fancybox data-caption="<h5 class='fg-theme'>Preparing to wash the village mosque's carpets</h5> <p>Volunteers getting ready to clean and maintain the local mosque</p>">
+            <img src="../assets/img/vol/1/10Preparing to wash the village mosque's carpets..JPG" alt="Mosque carpet cleaning">
+            <div class="img-caption">
+              <h5 class="fg-theme">Mosque carpet cleaning</h5>
+              <p>Maintaining the local place of worship</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/11Restoration of the village water canal..JPG" data-fancybox data-caption="<h5 class='fg-theme'>Restoration of the village water canal</h5> <p>Working on repairing and improving the water infrastructure for the community</p>">
+            <img src="../assets/img/vol/1/11Restoration of the village water canal..JPG" alt="Water canal restoration">
+            <div class="img-caption">
+              <h5 class="fg-theme">Water canal restoration</h5>
+              <p>Improving water infrastructure</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/12The group's accommodation in a school in an underprivileged area..JPG" data-fancybox data-caption="<h5 class='fg-theme'>Group's accommodation in a school</h5> <p>Volunteers staying at a local school during the charity mission</p>">
+            <img src="../assets/img/vol/1/12The group's accommodation in a school in an underprivileged area..JPG" alt="School accommodation">
+            <div class="img-caption">
+              <h5 class="fg-theme">School accommodation</h5>
+              <p>Volunteer lodging during the mission</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/13The cultural team members are consulting and organizing the donated books..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Cultural team organizing donated books</h5> <p>Volunteers sorting and arranging educational materials for the community</p>">
+            <img src="../assets/img/vol/1/13The cultural team members are consulting and organizing the donated books..jpeg" alt="Book donation organization">
+            <div class="img-caption">
+              <h5 class="fg-theme">Book donation sorting</h5>
+              <p>Preparing educational materials</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/1/14The cultural team members are preparing a puppet show..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Cultural team preparing a puppet show</h5> <p>Volunteers creating entertainment and educational activities for local children</p>">
+            <img src="../assets/img/vol/1/14The cultural team members are preparing a puppet show..jpeg" alt="Puppet show preparation">
+            <div class="img-caption">
+              <h5 class="fg-theme">Puppet show preparation</h5>
+              <p>Creating entertainment for children</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteer Gallery Images - Section 2: Infrastructure Improvement Project -->
+      <h3 class="section-header wow fadeInUp">Infrastructure Improvement Project</h3>
+      <div class="gridder my-3">
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/1The children of the underprivileged village..JPG" data-fancybox data-caption="<h5 class='fg-theme'>The children of the underprivileged village</h5> <p>Local children we met during our volunteer infrastructure project</p>">
+            <img src="../assets/img/vol/2/1The children of the underprivileged village..JPG" alt="Village children">
+            <div class="img-caption">
+              <h5 class="fg-theme">Village children</h5>
+              <p>Local children from the community</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/2me and Children from underprivileged rural areas-01.jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Me with children from rural areas</h5> <p>Interacting with local children during the volunteer mission</p>">
+            <img src="../assets/img/vol/2/2me and Children from underprivileged rural areas-01.jpeg" alt="Interaction with children">
+            <div class="img-caption">
+              <h5 class="fg-theme">Interaction with children</h5>
+              <p>Spending time with local children</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/3me as worke.jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Me as a worker</h5> <p>Taking part in the hands-on construction work for the village improvements</p>">
+            <img src="../assets/img/vol/2/3me as worke.jpeg" alt="Working on construction">
+            <div class="img-caption">
+              <h5 class="fg-theme">Working on construction</h5>
+              <p>Hands-on participation in building</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/4me helping with the construction of the wall for the underprivileged village's enclosure..jpg" data-fancybox data-caption="<h5 class='fg-theme'>Helping with wall construction</h5> <p>Building a protective wall for the village facilities</p>">
+            <img src="../assets/img/vol/2/4me helping with the construction of the wall for the underprivileged village's enclosure..jpg" alt="Wall construction">
+            <div class="img-caption">
+              <h5 class="fg-theme">Wall construction</h5>
+              <p>Building protective infrastructure</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/5Members of the charity camp group..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Members of the charity camp group</h5> <p>The volunteer team working together on the infrastructure project</p>">
+            <img src="../assets/img/vol/2/5Members of the charity camp group..jpeg" alt="Charity camp team">
+            <div class="img-caption">
+              <h5 class="fg-theme">Charity camp team</h5>
+              <p>Volunteer group working together</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/6Completion of the construction of the village restroom area..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Completion of village restroom construction</h5> <p>The finished restroom facilities built for the community</p>">
+            <img src="../assets/img/vol/2/6Completion of the construction of the village restroom area..jpeg" alt="Completed restroom construction">
+            <div class="img-caption">
+              <h5 class="fg-theme">Restroom construction</h5>
+              <p>Completed sanitation facilities</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/7Completion of the construction of the village restroom area.2.JPG" data-fancybox data-caption="<h5 class='fg-theme'>Another view of completed restrooms</h5> <p>Different angle of the finished sanitation facilities</p>">
+            <img src="../assets/img/vol/2/7Completion of the construction of the village restroom area.2.JPG" alt="Another view of restrooms">
+            <div class="img-caption">
+              <h5 class="fg-theme">Restroom facilities</h5>
+              <p>Another view of completed project</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/8Completion of the staircase construction project..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Completed staircase construction</h5> <p>Newly built stairs to improve accessibility in the village</p>">
+            <img src="../assets/img/vol/2/8Completion of the staircase construction project..jpeg" alt="Staircase construction">
+            <div class="img-caption">
+              <h5 class="fg-theme">Staircase construction</h5>
+              <p>Improving accessibility in the village</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/9Completion of the tile work project for the underprivileged village's restroom..JPG" data-fancybox data-caption="<h5 class='fg-theme'>Completed tile work for village restroom</h5> <p>Finished tiling in the newly constructed sanitation facilities</p>">
+            <img src="../assets/img/vol/2/9Completion of the tile work project for the underprivileged village's restroom..JPG" alt="Tile work completion">
+            <div class="img-caption">
+              <h5 class="fg-theme">Tile work completion</h5>
+              <p>Finished restroom tiling</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/2/10Completion of the tile work project for the underprivileged village's restroom.2.JPG" data-fancybox data-caption="<h5 class='fg-theme'>Another view of completed tile work</h5> <p>Different perspective of the tiling project in the community restroom</p>">
+            <img src="../assets/img/vol/2/10Completion of the tile work project for the underprivileged village's restroom.2.JPG" alt="Another view of tile work">
+            <div class="img-caption">
+              <h5 class="fg-theme">Tiling project</h5>
+              <p>Another angle of completed work</p>
+            </div>
+          </div><!-- Additional missing content for Section 2 -->
+        </div>
+      </div>
+
+      <!-- Volunteer Gallery Images - Section 3: Food and Livelihood Support Initiative -->
+      <h3 class="section-header wow fadeInUp">Food and Livelihood Support Initiative</h3>
+      <div class="gridder my-3">
+        <!-- Images from Folder 3 -->
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/3/1Call for help for the needy on my Instagram..jpg" data-fancybox data-caption="<h5 class='fg-theme'>Call for help on Instagram</h5> <p>Social media campaign to gather donations for those in need</p>">
+            <img src="../assets/img/vol/3/1Call for help for the needy on my Instagram..jpg" alt="Instagram help call">
+            <div class="img-caption">
+              <h5 class="fg-theme">Instagram help call</h5>
+              <p>Social media fundraising campaign</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/3/2Call for help for the needy on my Instagram.2.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Second call for help on Instagram</h5> <p>Follow-up social media post to gather additional support</p>">
+            <img src="../assets/img/vol/3/2Call for help for the needy on my Instagram.2.jpg" alt="Second Instagram campaign">
+            <div class="img-caption">
+              <h5 class="fg-theme">Second Instagram campaign</h5>
+              <p>Follow-up fundraising post</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/3/3The food and livelihood items purchased for the needy..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Food and livelihood items purchased</h5> <p>Essential supplies gathered through donations for distribution</p>">
+            <img src="../assets/img/vol/3/3The food and livelihood items purchased for the needy..jpeg" alt="Food and livelihood items">
+            <div class="img-caption">
+              <h5 class="fg-theme">Food and livelihood items</h5>
+              <p>Essential supplies for distribution</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/3/4The food items purchased for the needy..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Food items purchased for the needy</h5> <p>Groceries and food supplies collected for vulnerable families</p>">
+            <img src="../assets/img/vol/3/4The food items purchased for the needy..jpeg" alt="Food items purchased">
+            <div class="img-caption">
+              <h5 class="fg-theme">Food items purchased</h5>
+              <p>Groceries for vulnerable families</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/3/5Livelihood packages for the needy..JPG" data-fancybox data-caption="<h5 class='fg-theme'>Livelihood packages for the needy</h5> <p>Prepared support packages ready for distribution to families in need</p>">
+            <img src="../assets/img/vol/3/5Livelihood packages for the needy..JPG" alt="Livelihood packages">
+            <div class="img-caption">
+              <h5 class="fg-theme">Livelihood packages</h5>
+              <p>Support packages ready for distribution</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/3/6The contents of a livelihood package..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Contents of a livelihood package</h5> <p>Detailed view of the items included in each support package</p>">
+            <img src="../assets/img/vol/3/6The contents of a livelihood package..jpeg" alt="Livelihood package contents">
+            <div class="img-caption">
+              <h5 class="fg-theme">Livelihood package contents</h5>
+              <p>Items included in each support package</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="grid-item wow fadeIn">
+          <div class="img-place" data-src="../assets/img/vol/3/7The receipt for the purchased goods for public announcement and financial transparency..jpeg" data-fancybox data-caption="<h5 class='fg-theme'>Receipt for purchased goods</h5> <p>Financial transparency documentation for the charity initiative</p>">
+            <img src="../assets/img/vol/3/7The receipt for the purchased goods for public announcement and financial transparency..jpeg" alt="Financial transparency receipt">
+            <div class="img-caption">
+              <h5 class="fg-theme">Financial transparency</h5>
+              <p>Receipt for purchased charity goods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End of container -->
+  </div> <!-- End of vg-page -->
+  
+  <!-- Footer -->
+  <div class="vg-footer">
+    <h1 class="text-center">Contact Information</h1>
+    <div class="container">
+      <div class="row">
+        <!-- Address -->
+        <div class="col-lg-4 py-3">
+          <div class="footer-info">
+            <p>Where to find me</p>
+            <hr class="divider">
+            <p class="fs-large fg-white">1665876754 Niazi St, Bagheri Highway, Tehran, Iran</p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="col-lg-4 py-3">
+          <div class="footer-info">
+            <p>Connect with me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.linkedin.com/in/saber-rezaei" target="_blank" class="social-link">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/RezaeiSaber" target="_blank" class="social-link">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://scholar.google.com/citations?user=xGl9XeUAAAAJ&hl=en" target="_blank" class="social-link">
+                  <i class="fas fa-graduation-cap"></i> Google Scholar
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Contact Details -->
+        <div class="col-lg-4 py-3">
+          <div class="footer-info" id="contact">
+            <p>Contact me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li>
+                <a href="mailto:Saber.Rezaeiust@gmail.com" class="social-link">
+                  <i class="fas fa-envelope"></i> E-Mail: Saber.Rezaeiust@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+989367507102" class="social-link">
+                  <i class="fas fa-phone"></i> Mobile Number: +98 936 750 7102
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row justify-content-center mt-3">
+        <div class="col-12">
+          <p class="text-center mb-0 mt-4">
+            Copyright &copy;2024. All rights reserved | This site edited with 
+            <span class="ti-heart fg-theme-red"></span> by 
+            <a href="https://github.com/RezaeiSaber/">Saber </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End footer -->
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+  <!-- Bootstrap JS bundle -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Virtual JS -->
+  <script src="../assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <script src="../assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+  <script src="../assets/vendor/wow/wow.min.js"></script>
+  <script src="../assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/js/google-maps.js"></script>
+  <script src="../assets/js/topbar-virtual.js"></script>
+  
+  <!-- Slick JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  <!-- Add custom initialization script -->
+  <script>
+    $(document).ready(function(){
+      // Initialize WOW.js for animations
+      new WOW().init();
+      
+      // No need for Isotope initialization since we're using CSS Grid
+      
+      // FIXED: Initialize all images to be visible, even if they don't trigger load event
+      $('.grid-item img').each(function() {
+        $(this).css('opacity', 1);
+        
+        // Still maintain the load event for any images that happen to load later
+        $(this).on('load', function() {
+          $(this).css('opacity', 1);
+        });
+        
+        // Add error handling to show placeholder if image fails to load
+        $(this).on('error', function() {
+          $(this).attr('src', '../assets/img/placeholder.jpg'); // Create a placeholder image in this directory
+          $(this).css('opacity', 1);
+        });
+      });
+      
+      // Initialize FancyBox for image viewing
+      $('[data-fancybox]').fancybox({
+        buttons: [
+          "zoom",
+          "share",
+          "slideShow",
+          "fullScreen",
+          "download",
+          "thumbs",
+          "close"
+        ],
+        loop: true,
+        protect: true
+      });
+    });
+    </script>
+</body>
+</html>
+

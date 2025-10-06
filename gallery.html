@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saber Rezaei - Research Gallery | Moments from my journey as a researcher and engineer">
+    <meta name="keywords" content="Saber Rezaei, Research Gallery, EEG, Laboratory, Neuroscience, Cognitive Engineering">
+    <meta name="author" content="Saber Rezaei">
+    
+    <title>Research Gallery | Saber Rezaei</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E587SWM9M2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-E587SWM9M2');
+    </script>
+    
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rezaeisaber.github.io/modern-site/gallery.html">
+    <meta property="og:title" content="Research Gallery | Saber Rezaei">
+    <meta property="og:description" content="Moments from my journey as a researcher and engineer in Cognitive NeuroEngineering">
+    <meta property="og:image" content="../assets/img/work/me at lab.jpg">
+    
+    <!-- Additional Gallery Styles -->
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: var(--space-md);
+        }
+        
+        .gallery-caption h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+        
+        .gallery-caption p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .section-divider {
+            margin: var(--space-2xl) 0;
+            text-align: center;
+        }
+        
+        .section-divider h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-divider h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        
+        .back-btn {
+            margin-bottom: var(--space-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-brand">Saber Rezaei</a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="#gallery" class="nav-link active">Gallery</a></li>
+                <li><a href="youtube.html" class="nav-link">YouTube</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Gallery Page -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="back-btn">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+            
+            <div class="section-header">
+                <h1 class="section-title">Research Gallery</h1>
+                <p class="section-subtitle">
+                    Welcome to my gallery! Here, I share moments from my journey as a researcher and engineer. 
+                    This page captures my experiences in the lab, EEG recording sessions, and other highlights 
+                    from my work in Cognitive NeuroEngineering.
+                </p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="../assets/img/work/me at lab.jpg" data-fancybox="gallery" data-caption="Me at INTC Lab - EEG data analysis and signal processing work">
+                        <img src="../assets/img/work/me at lab.jpg" alt="Me at INTC Lab" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>At INTC Lab</h3>
+                        <p>EEG data analysis and signal processing work in the laboratory</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="../assets/img/work/my subject.jpg" data-fancybox="gallery" data-caption="EEG Recording Session - Subject preparation and data collection">
+                        <img src="../assets/img/work/my subject.jpg" alt="EEG Recording Session" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>EEG Recording Session</h3>
+                        <p>Subject preparation and data collection for brain signal analysis</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="../assets/img/work/me as subject fnirs.jpg" data-fancybox="gallery" data-caption="FNIRS Task - Me as subject at National Brain Mapping Laboratory">
+                        <img src="../assets/img/work/me as subject fnirs.jpg" alt="FNIRS Task" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Me as FNIRS Subject</h3>
+                        <p>At National Brain Mapping Laboratory for functional near-infrared spectroscopy</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="../assets/img/work/national brain mapping lab.jpg" data-fancybox="gallery" data-caption="National Brain Mapping Laboratory - Advanced neuroscience research facility">
+                        <img src="../assets/img/work/national brain mapping lab.jpg" alt="Brain Mapping Lab" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>National Brain Mapping Laboratory</h3>
+                        <p>Advanced neuroscience research facility for brain imaging studies</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="../assets/img/work/fes/functions.JPG" data-fancybox="gallery" data-caption="Paragrasp Device - FES system with corresponding hand gestures for rehabilitation">
+                        <img src="../assets/img/work/fes/functions.JPG" alt="Paragrasp Device" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Paragrasp FES Device</h3>
+                        <p>Functional electrical stimulation system with corresponding hand gestures</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="../assets/img/work/patient using parawalk.jpg" data-fancybox="gallery" data-caption="ParaWalk System - Patient rehabilitation with neuroprosthetic walking device">
+                        <img src="../assets/img/work/patient using parawalk.jpg" alt="Patient using ParaWalk" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Patient Using ParaWalk</h3>
+                        <p>Spinal cord injury patient walking with ParaWalk neuroprosthetic device</p>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="gallery-item">
+                    <a href="../assets/img/work/python event.jpg" data-fancybox="gallery" data-caption="Python Programming Event - Presentation of case studies and research findings">
+                        <img src="../assets/img/work/python event.jpg" alt="Python Event" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Python Programming Event</h3>
+                        <p>Presentation of case studies and research findings to the community</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="../assets/img/work/python event2.jpg" data-fancybox="gallery" data-caption="Programming Workshop - Discussions on critical thinking and problem-solving approaches">
+                        <img src="../assets/img/work/python event2.jpg" alt="Programming Workshop" class="gallery-image">
+                    </a>
+                    <div class="gallery-caption">
+                        <h3>Programming Workshop</h3>
+                        <p>Discussions on critical thinking and innovative problem-solving approaches</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/saber-rezaei" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/RezaeiSaber" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=xGl9XeUAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="mailto:Saber.Rezaeiust@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Saber Rezaei. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; opacity: 0.8;">
+                    <i class="fas fa-map-marker-alt"></i> Tehran, Iran
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Initialize FancyBox for image gallery
+        $(document).ready(function() {
+            $('[data-fancybox="gallery"]').fancybox({
+                buttons: [
+                    "zoom",
+                    "share",
+                    "slideShow",
+                    "fullScreen",
+                    "download",
+                    "thumbs",
+                    "close"
+                ],
+                loop: true,
+                protect: true,
+                animationEffect: "zoom-in-out",
+                transitionEffect: "slide"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saber Rezaei - YouTube Videos | Projects, Python codes, and Cognitive NeuroEngineering demonstrations">
+    <meta name="keywords" content="Saber Rezaei, YouTube, Python, EEG, Machine Learning, Neuroscience, Hand Gesture Recognition">
+    <meta name="author" content="Saber Rezaei">
+    
+    <title>YouTube Videos | Saber Rezaei</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E587SWM9M2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-E587SWM9M2');
+    </script>
+    
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rezaeisaber.github.io/modern-site/youtube.html">
+    <meta property="og:title" content="YouTube Videos | Saber Rezaei">
+    <meta property="og:description" content="Python codes, EEG projects, and Cognitive NeuroEngineering demonstrations">
+    <meta property="og:image" content="../assets/img/work/me at lab.jpg">
+    
+    <!-- Additional YouTube Styles -->
+    <style>
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        
+        .video-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .video-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-caption {
+            padding: var(--space-md);
+        }
+        
+        .video-caption h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .video-caption p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .section-divider {
+            margin: var(--space-2xl) 0;
+            text-align: center;
+        }
+        
+        .section-divider h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-divider h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        
+        .back-btn {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .video-stats {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: var(--space-xl);
+            margin: var(--space-xl) 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-md);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: var(--space-xs);
+        }
+        
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-brand">Saber Rezaei</a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="#youtube" class="nav-link active">YouTube</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- YouTube Page -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="back-btn">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+            
+            <div class="section-header">
+                <h1 class="section-title">YouTube Videos</h1>
+                <p class="section-subtitle">
+                    Welcome to my YouTube page! Here, I showcase videos of my projects, Python codes, and their outputs. 
+                    I also demonstrate my work in Cognitive NeuroEngineering, including real-time EEG artifact detection, 
+                    hand gesture recognition, and more. Each video provides insights into my research and the tools I use 
+                    to solve complex problems.
+                </p>
+            </div>
+            
+            <!-- Video Statistics -->
+            <div class="video-stats">
+                <h3>Channel Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Videos Published</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Research Areas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Original Content</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- EEG and Signal Processing Videos -->
+            <div class="section-divider">
+                <h2>EEG Signal Processing & Brain Interfaces</h2>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/95YqbLaec9c?si=NoRbBR2mtdElEmMw" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <h3>Real-time EEG Artifact Detection</h3>
+                        <p>This video demonstrates real-time detection of various EEG artifact classes, which will later be used as hand movement switches for rehabilitation purposes. Advanced signal processing techniques are applied for accurate classification.</p>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/E42SCF2z47s?si=HcAf4ITqTb8YHV-a" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <h3>EMG Signal Acquisition from Patient</h3>
+                        <p>Demonstration of EMG signal acquisition from a patient during experimental sessions. This shows the practical application of biomedical signal processing in clinical environments.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hand Gesture Recognition Videos -->
+            <div class="section-divider">
+                <h2>Hand Gesture Recognition & Computer Vision</h2>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PFdaHAKLWxc?si=9APJ0tFO0VLdMW4A" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <h3>Hand Gesture Recognition</h3>
+                        <p>Hand gesture recognition implementation using Python with MediaPipe and QtPy libraries. This demonstrates real-time computer vision applications for human-computer interaction.</p>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/6OAZla8bHf4?si=kCpAilK88LZ71fdM" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <h3>5 Finger Angle Plot</h3>
+                        <p>Real-time finger angle calculation and plotting using Python with MediaPipe and QtPy. The system detects hand landmarks, calculates finger angles, and visualizes them dynamically.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FES and Rehabilitation Videos -->
+            <div class="section-divider">
+                <h2>FES Systems & Neurorehabilitation</h2>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/xG4Flq5fku8?si=LRmiiYw59nphI189" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <h3>FES Hand Stimulation: Paragrasp Glove Test (Healthy Subject)</h3>
+                        <p>Investigation of the Paragrasp functional electrical stimulation (FES) glove effects on a healthy subject. This advanced neurorehabilitation device features 8 reference points and 32 stimulation channels.</p>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7lRjZ3dgKoY?si=8l-O5mdoA2F_ihMt" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <h3>FES Hand Stimulation: Paragrasp Glove Test (Tetraplegic Patient)</h3>
+                        <p>Investigation of the Paragrasp functional electrical stimulation (FES) glove effects on a tetraplegic patient with cervical spinal cord injury. Demonstrates real clinical applications of FES technology.</p>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/N1lbQsgRo5Q?si=9K258T_77_LZrSPy" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <h3>Patient Walking with ParaWalk</h3>
+                        <p>A spinal cord injury patient walking with the aid of ParaWalk, a neuroprosthetic device designed to help individuals with spinal cord injuries stand and walk. Shows the practical impact of assistive technologies.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Subscribe Section -->
+            <div style="text-align: center; margin: var(--space-2xl) 0; padding: var(--space-xl); background: var(--surface); border-radius: 12px;">
+                <h3 style="margin-bottom: var(--space-md);">Want to see more?</h3>
+                <p style="margin-bottom: var(--space-lg); color: var(--text-secondary);">
+                    Subscribe to my channel for the latest updates on my research projects and technical demonstrations.
+                </p>
+                <a href="https://www.youtube.com/@SaberRezaei-l6k" target="_blank" class="btn btn-primary btn-large">
+                    <i class="fab fa-youtube"></i>
+                    Subscribe to Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/saber-rezaei" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/RezaeiSaber" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=xGl9XeUAAAAJ&hl=en" target="_blank" class="social-link" title="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="mailto:Saber.Rezaeiust@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Saber Rezaei. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; opacity: 0.8;">
+                    <i class="fas fa-map-marker-alt"></i> Tehran, Iran
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
