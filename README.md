@@ -1,13 +1,45 @@
 # Saber Rezaei
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FRezaeiSaber&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-1da1f2?labelColor=1da1f2&logo=twitter&logoColor=white&link=https://twitter.com/hejazizo)]()
 [![Linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/saber-rezaei-772378b5/)
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-purple?logo=instagram&logoColor=white&link=https://instagram.com/0000saber0000/)](https://www.instagram.com/0000saber0000)
 [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:saber.rezaeiust@gmail.com)
 [![Github](https://img.shields.io/github/followers/RezaeiSaber?label=Follow&style=social)](https://github.com/RezaeiSaber)
 
+<p align="center">
+  
+  <!-- Profile Views -->
+  <a href="https://hits.seeyoufarm.com">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FRezaeiSaber&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Profile+Views&edge_flat=false"/>
+  </a>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/hejazizo">
+    <img src="https://img.shields.io/badge/-Twitter-1da1f2?labelColor=1da1f2&logo=twitter&logoColor=white"/>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/saber-rezaei-772378b5/">
+    <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white"/>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/0000saber0000">
+    <img src="https://img.shields.io/badge/-Instagram-purple?logo=instagram&logoColor=white"/>
+  </a>
+
+  <!-- Gmail -->
+  <a href="mailto:saber.rezaeiust@gmail.com">
+    <img src="https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white"/>
+  </a>
+
+  <!-- GitHub Follow -->
+  <a href="https://github.com/RezaeiSaber">
+    <img src="https://img.shields.io/github/followers/RezaeiSaber?label=Follow&style=social"/>
+  </a>
+
+</p>
 
 - 👨🏻‍🎓 Bachelo's Degree in Electrical Engineering 
 - 🎓 M.Sc. in Neurocognitive engineering
