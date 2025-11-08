@@ -20,7 +20,8 @@
 - Deep Learning (TensorFlow)
 - Data Analysis
 
-![snake](https://raw.githubusercontent.com/000saber000/000saber000/main/resources/img/grid-snake.svg)
+
+![snake](https://raw.githubusercontent.com/RezaeiSaber/RezaeiSaber/main/resources/img/grid-snake.svg)
 
 ### ⚙️ Tech Stack
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat-square&logo=Python&color=353535)
