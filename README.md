@@ -13,11 +13,12 @@
 - 📫 How to reach me: click on E-Mail Badge on top of page
 
 ### 🖥 Skills
+- Neuroscience
 - Signal Processing
 - Python
 - Matlab
 - Machine Learning
-- Deep Learning (TensorFlow)
+- Deep Learning (TensorFlow/Pytorch)
 - Data Analysis
 
 
