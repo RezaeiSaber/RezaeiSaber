@@ -3,7 +3,6 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=RezaeiSaber&label=Profile+Views&color=blue&style=flat)
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-1da1f2?labelColor=1da1f2&logo=twitter&logoColor=white&link=https://twitter.com/hejazizo)]()
 [![Linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/saber-rezaei-772378b5/)
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-purple?logo=instagram&logoColor=white&link=https://instagram.com/0000saber0000/)](https://www.instagram.com/0000saber0000)
 [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:saber.rezaeiust@gmail.com)
 [![Github](https://img.shields.io/github/followers/RezaeiSaber?label=Follow&style=social)](https://github.com/RezaeiSaber)
 
